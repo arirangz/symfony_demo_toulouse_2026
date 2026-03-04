@@ -12,5 +12,13 @@
         <p>Vous n'êtes pas autorisé à jouer à ce jeu</p>
     {% endif %}
 
-    
+    <section>
+        <h2>Liste des films</h2>
+        {% for movie in movies %}
+            <article>
+                <h3>{{ movie.name }}</h3>
+            </article>
+        {% endfor %}
+    </section>
+
 {% endblock %}
