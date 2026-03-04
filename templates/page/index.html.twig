@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <h1>Accueil</h1>
+    <h2>Nom d'utilisateur: {{ username }}</h2>
+
+    {% if age => 18 %}
+        <p>Vous êtes autorisé à jouer à ce jeu</p>
+    {% else %}
+        <p>Vous n'êtes pas autorisé à jouer à ce jeu</p>
+    {% endif %}
+
+    
+{% endblock %}
