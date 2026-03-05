@@ -4,21 +4,16 @@
 
 {% block body %}
     <h1>Accueil</h1>
-    <h2>Nom d'utilisateur: {{ username }}</h2>
-
-    {% if age => 18 %}
-        <p>Vous êtes autorisé à jouer à ce jeu</p>
-    {% else %}
-        <p>Vous n'êtes pas autorisé à jouer à ce jeu</p>
-    {% endif %}
 
     <section>
         <h2>Liste des films</h2>
         {% for movie in movies %}
             <article>
-                <h3>{{ movie.name }}</h3>
+                <h3>{{ movie.title }}</h3>
+                <p>Réalisé par: {{ movie.director.firstName }} {{ movie.director.lastName }}</p>
             </article>
         {% endfor %}
     </section>
 
 {% endblock %}
+
